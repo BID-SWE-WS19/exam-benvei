@@ -49,7 +49,7 @@ namespace BID.SWE.EXAM.Impl
     public class Bewegung
     {
 
-        public string position()
+        public string Position()
         {
             string myPosition = "Position";
             return myPosition;
