@@ -17,7 +17,7 @@ namespace BID.SWE.EXAM.Impl
 
         public bool Method3(int o1)
         {
-            return new MyCell().IsAlive();
+            return new MyCell().IsAlive(o1);
         }
     }
     
@@ -26,6 +26,17 @@ namespace BID.SWE.EXAM.Impl
         public override int Grow()
         {
             return _size * 2;
+        }
+        public bool IsAlive(int neighbour)
+        {
+            if (neighbour % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

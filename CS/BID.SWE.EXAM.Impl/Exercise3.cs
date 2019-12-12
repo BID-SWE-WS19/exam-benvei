@@ -13,7 +13,7 @@ namespace BID.SWE.EXAM.Impl
 
         public object Method2()
         {
-            throw new NotImplementedException();
+            
         }
 
     }
