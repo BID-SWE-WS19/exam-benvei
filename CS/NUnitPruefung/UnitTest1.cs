@@ -26,10 +26,48 @@ namespace NUnitPruefung
             }
         }
 
+        [Test]
         public void TestCellPrinter2()
         {
             CellPrinter print = testex1.Method1() as CellPrinter;
-            
+
+        }
+
+        private Exercise2 testex2 = new Exercise2();
+
+        [Test]
+        public void TestIfDoubleWorks()
+        {
+            Assert.AreEqual(2, this.testex2.Method2());
+        }
+
+        [Test]
+        public void TestIfTrue()
+        {
+            Assert.AreEqual(true, this.testex2.Method3(2));
+        }
+
+        [Test]
+        public void TestIfFalse()
+        {
+            Assert.AreEqual(false, this.testex2.Method3(3));
+        }
+
+        private Exercise3 testex3 = new Exercise3();
+
+        [Test]
+        public void TestHeteroArray()
+        {
+            try
+            {
+                Bewegung beweg = testex3.Method2() as Bewegung;
+                Assert.IsTrue(true);
+            }
+            catch (System.Exception)
+            {
+                Assert.IsTrue(false);
+            }
         }
     }
+        
 }
