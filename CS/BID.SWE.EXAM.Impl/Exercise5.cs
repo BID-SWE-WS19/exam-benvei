@@ -9,7 +9,9 @@ namespace BID.SWE.EXAM.Impl
        
         public object Method1(string str, int i)
         {
-            List myStrings = new List<string>;
+            //           List myStrings = new List<string>;
+            // not done, tried implementing tests instead
+            return string.Empty;
         }
     }
 }
