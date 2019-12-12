@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
+using System.Net.Sockets;
 using BID.SWE1.Exam.Interfaces;
 
 namespace BID.SWE.EXAM.Impl
@@ -11,6 +13,10 @@ namespace BID.SWE.EXAM.Impl
         {
             //           List myStrings = new List<string>;
             // not done, tried implementing tests instead
+            IPHostEntry ipHostInfo = Dns.GetHostEntry("myhost.com");
+            IPAddress ipAddress = ipHostInfo.AddressList[0];
+            Socket client = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+            // not done
             return string.Empty;
         }
     }

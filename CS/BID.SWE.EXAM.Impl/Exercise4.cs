@@ -26,7 +26,8 @@ namespace BID.SWE.EXAM.Impl
 
         public object Method2(object obj)
         {
-            throw new NotImplementedException();
+            MemoryStream incomming = new MemoryStream();
+
         }
     }
 }
