@@ -7,8 +7,35 @@ namespace BID.SWE.EXAM.Impl
     {
         public object Method1()
         {
-            //test
-            throw new NotImplementedException();
+            return new CellPrinter();
+        }
+
+    }
+
+    public class CellPrinter : ICellPrinter
+    {
+        public string PrintPostion(int x, int y)
+        {
+            string sumstring = string.Empty;
+
+            sumstring = "Cell is on Position X:" + x + " Y:" + y;
+
+            return sumstring;
+        }
+
+        public string PrintState(bool alive, DateTime date, string color)
+        {
+            string sumstring = string.Empty;
+            if (alive)
+            {
+                sumstring = "Cell" + color + "born on" + "date" + "is alive";
+            }
+            else
+            {
+                sumstring = "Cell" + color + "born on" + "date" + "is not alive";
+            }
+
+            return sumstring;
         }
     }
 }
