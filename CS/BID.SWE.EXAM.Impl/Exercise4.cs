@@ -26,8 +26,8 @@ namespace BID.SWE.EXAM.Impl
 
         public object Method2(object obj)
         {
-            MemoryStream incomming = new MemoryStream();
-
+            string incomming = obj.ToString();
+            return incomming;
         }
     }
 }
