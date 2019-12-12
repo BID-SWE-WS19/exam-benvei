@@ -1,4 +1,5 @@
 ﻿using System;
+using BID.SWE1.Exam.Impl;
 using BID.SWE1.Exam.Interfaces;
 
 namespace BID.SWE.EXAM.Impl
@@ -7,7 +8,7 @@ namespace BID.SWE.EXAM.Impl
     {
         public object Method1()
         {
-            throw new NotImplementedException();
+            return new MyMap();
         }
 
         public object Method2()
@@ -15,5 +16,26 @@ namespace BID.SWE.EXAM.Impl
             throw new NotImplementedException();
         }
 
+    }
+
+    public class MyMap : Map
+    {
+        public override int AddNewCells(int year)
+        {
+            return year;
+        }
+
+        public override string GetMapName()
+        {
+            string mapname = "BID-Map";
+            return mapname;
+        }
+
+        public override float GetMapSize(float amount)
+        {
+            float result;
+            result = amount * amount;
+            return result;
+        }
     }
 }
